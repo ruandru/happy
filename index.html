@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document
+    </title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+    ul {
+        margin-bottom: 70px;
+    }
+    
+    <link href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.2/css/bootstrap.css" rel="stylesheet">
+    </style>
+</head>
+
+<body>
+    <div class="page-header container page-header-success">
+        <h1>笑话大全 <small>笑口常开</small></h1>
+    </div>
+    <!-- 查询 -->
+    <ul class="list-group container list-group-item-success">
+    </ul>
+    <ul class="list-group container list-group-item-info">
+    </ul>
+    <ul class="list-group container list-group-item-warning">
+    </ul>
+    <ul class="list-group container list-group-item-danger">
+    </ul>
+    <ul class="list-group container list-group-item-warning">
+    </ul>
+    <ul class="list-group container list-group-item-info">
+    </ul>
+</body>
+
+</html>
+<!-- <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+<script src="shuju.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+for (var key in data) {
+    var data = data.result;
+    console.log(data);
+    $("ul").each(function(i, element) {
+        $(element).append($(
+            '<li class="list-group-item">' + data[i].id + '</li>' +
+            '<li class="list-group-item">' + data[i].title + '</li>' +
+            '<li class="list-group-item">' + data[i].source + '</li>' +
+            '<li class="list-group-item">' + data[i].firstImg + '</li>' +
+            '<li class="list-group-item">' + data[i].url + '</li>'
+        ))
+    });
+}
+</script>
